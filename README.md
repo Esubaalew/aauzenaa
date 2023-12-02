@@ -1,7 +1,7 @@
-# AAUZena GitHub Repository
+# AAUZena
 
 ## Overview
-This Django app, named AAUZena, fetches news and announcements from the AAUScraper model.
+This Django app, named AAUZena, fetches news and announcements from the `https://github.com/Esubaalew/AAUScraper` module
 
 
 
