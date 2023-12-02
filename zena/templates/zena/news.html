@@ -1,0 +1,32 @@
+{% extends 'zena/base.html' %}
+
+{% block title %}News - AAU{% endblock %}
+
+{% block content %}
+    <!-- News Content -->
+    <div class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <a class="btn btn-warning btn-lg" href="{% url 'zena:home' %}" role="button">Home</a>
+                <a class="btn btn-success btn-lg" href="{% url 'zena:announcements' %}" role="button">Announcements</a>
+                <div class="row">
+                    {% for article in news_info_list %}
+                        <div class="col-md-4 d-flex">
+                            <!-- News Article Card -->
+                            <div class="card mb-4 flex-fill h-100">
+                                <img src="{{ article.image_link }}" class="card-img-top" alt="{{ article.title }}">
+                                <div class="card-body d-flex flex-column">
+                                    <h2 class="card-title text-primary">{{ article.title }}</h2>
+                                    <p class="card-text flex-fill">{{ article.sample_text|truncatewords:20 }}</p>
+                                    <!-- Change 20 to the desired number of words -->
+                                    <p class="card-text mt-auto"><small class="text-muted">{{ article.date_posted }}</small></p>
+                                    <a href="{{ article.link }}" class="btn btn-primary" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

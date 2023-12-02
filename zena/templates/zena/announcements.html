@@ -1,0 +1,31 @@
+{% extends 'zena/base.html' %}
+
+{% block title %}Announcements - AAU{% endblock %}
+
+{% block content %}
+    <!-- Announcements Content -->
+    <div class="container mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                                <a class="btn btn-warning btn-lg" href="{% url 'zena:home' %}" role="button">Home</a>
+                                <a class="btn btn-primary btn-lg" href="{% url 'zena:news' %}" role="button">News</a>
+                <div class="row">
+                    {% for announcement in announcements_info_list %}
+                        <div class="col-md-4 d-flex">
+                            <!-- Announcements Article Card -->
+                            <div class="card mb-4 flex-fill h-100">
+                                <img src="{{ announcement.image_link }}" class="card-img-top" alt="{{ announcement.title }}">
+                                <div class="card-body d-flex flex-column">
+                                    <h2 class="card-title text-success">{{ announcement.title }}</h2>
+                                    <p class="card-text flex-fill">{{ announcement.sample_text|truncatewords:20 }}</p>
+                                    <p class="card-text mt-auto"><small class="text-muted">{{ announcement.date_posted }}</small></p>
+                                    <a href="{{ announcement.link }}" class="btn btn-primary" target="_blank">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

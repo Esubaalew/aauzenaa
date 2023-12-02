@@ -1,0 +1,21 @@
+{% extends 'zena/base.html' %}
+
+{% block title %}AAU News and Announcements{% endblock %}
+
+{% block content %}
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to AAU News</h1>
+        <p class="lead">Stay updated with the latest news and announcements from Addis Ababa University.</p>
+        <hr class="my-4">
+        <!-- Wrap the "Choose a category to explore" and buttons in a shadowed card -->
+        <div class="card text-center shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <p class="card-text">Choose a category to explore:</p>
+                <!-- Add href values for the News and Announcements pages -->
+                <a class="btn btn-primary btn-lg" href="{% url 'zena:news' %}" role="button">News</a>
+                <a class="btn btn-success btn-lg" href="{% url 'zena:announcements' %}" role="button">Announcements</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+.container {
+    margin-bottom: 50px; /* Adjust the value as needed */
+}
+body {
+    padding-top: 56px;
+    font-family: 'Arial', sans-serif; /* Set a default font family */
+}
+
+.navbar {
+    border-bottom: 4px solid #28a745; /* Add a green border to the navbar */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Increase the font size of the navbar brand */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Increase the font size of the navbar links */
+}
+
+.jumbotron {
+    background: #f8f9fa;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.jumbotron h1 {
+    color: #28a745; /* Set the heading color to green */
+}
+
+.jumbotron p {
+    font-size: 1.2rem; /* Increase the font size of the jumbotron text */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Set primary button background color to blue */
+    border-color: #007bff; /* Set primary button border color to blue */
+}
+
+.btn-success {
+    background-color: #28a745; /* Set success button background color to green */
+    border-color: #28a745; /* Set success button border color to green */
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50%
+    font-size: 0.9rem;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+    .navbar {
+        border-bottom: none; /* Remove the border on small screens */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; /* Decrease the font size of the navbar brand on small screens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Decrease the font size of the navbar links on small screens */
+    }
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+}

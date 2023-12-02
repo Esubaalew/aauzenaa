@@ -1,0 +1,4 @@
+/.venv
+/db.sqlite3
+/env
+/aauzena/__pycache__/settings.cpython-311.pyc
